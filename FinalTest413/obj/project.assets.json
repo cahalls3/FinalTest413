@@ -1205,7 +1205,7 @@
       "outputPath": "/Users/carsonhalls/Documents/GitHub/FinalTest413/FinalTest413/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/carsonhalls/.config/NuGet/NuGet.Config"
+        "/Users/carsonhalls/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

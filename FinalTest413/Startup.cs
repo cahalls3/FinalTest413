@@ -27,12 +27,12 @@ namespace FinalTest413
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<BowlingLeagueDbContext>(options =>
+            services.AddDbContext<QuoteDbContext>(options =>
             {
-                options.UseMySql(Configuration["ConnectionStrings:BowlingLeagueDbConnection"]);
+                options.UseSqlite(Configuration["ConnectionStrings:QuoteDBConnection"]);
             });
 
-            services.AddScoped<IBowlingLeagueRepository, EFBowlingLeagueRepository>();
+            services.AddScoped<IQuoteRepository, EFQuoteRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

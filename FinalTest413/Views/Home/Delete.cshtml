@@ -1,15 +1,15 @@
 ﻿@{
-    ViewData["Title"] = "Delete Bowler";
+    ViewData["Title"] = "Delete Quote";
 }
 
-@model Bowler
+@model Quote
 
 <h2>Confirm Deletion</h2>
-<h3>Are you sure you want to delete the record for @Model.BowlerFirstName @Model.BowlerLastName?</h3>
+<h3>Are you sure you want to delete the quote by @Model.Author given on @Model.Date?</h3>
 
 <form method="post" asp-controller="Home" asp-action="Delete">
     <button type="submit">Delete</button>
-    <a asp-controller="Home" asp-action="BowlerList" class="btn btn-primary">Cancel</a>
+    <a asp-controller="Home" asp-action="QuoteList" class="btn btn-primary">Cancel</a>
 
-    <input type="hidden" asp-for="BowlerID" />
+    <input type="hidden" asp-for="QuoteID" />
 </form>

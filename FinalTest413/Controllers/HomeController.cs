@@ -28,11 +28,11 @@ namespace FinalTest413.Controllers
 
         public IActionResult QuoteList()
         {
-            var bowlers = _repo.Quotes
-                .OrderBy(x => x.QuoteID)
+            var quotes = _repo.Quotes
+                .OrderBy(x => x.Author)
                 .ToList();
 
-            return View(bowlers);
+            return View(quotes);
         }
 
         [HttpGet]
