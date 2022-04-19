@@ -11,50 +11,50 @@ namespace FinalTest413.Controllers
 {
     public class HomeController : Controller
     {
-        private IBowlingLeagueRepository _repo { get; set; }
+        private IQuoteRepository _repo { get; set; }
 
-        public HomeController(IBowlingLeagueRepository temp)
+        public HomeController(IQuoteRepository temp)
         {
             _repo = temp;
         }
 
         public IActionResult Index()
         {
-            var money = _repo.Bowlers
+            var money = _repo.Quotes
                 .ToList();
 
             return View(money);
         }
 
-        public IActionResult BowlerList()
+        public IActionResult QuoteList()
         {
-            var bowlers = _repo.Bowlers
-                .OrderBy(x => x.BowlerID)
+            var bowlers = _repo.Quotes
+                .OrderBy(x => x.QuoteID)
                 .ToList();
 
             return View(bowlers);
         }
 
         [HttpGet]
-        public IActionResult NewBowler()
+        public IActionResult NewQuote()
         {
-            ViewBag.Teams = _repo.Teams.ToList();
+            //ViewBag.Teams = _repo.Teams.ToList();
 
             return View();
         }
 
         [HttpPost]
-        public IActionResult NewBowler(Bowler b)
+        public IActionResult NewQuote(Quote q)
         {
             if (ModelState.IsValid)
             {
-                _repo.Add(b);
+                _repo.Add(q);
 
-                return View("Confirmation", b);
+                return View("Confirmation", q);
             }
             else // if invalid
             {
-                ViewBag.Teams = _repo.Teams.ToList();
+                //ViewBag.Teams = _repo.Teams.ToList();
 
                 return View();
             }
@@ -62,37 +62,37 @@ namespace FinalTest413.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit(int bowlerid)
+        public IActionResult Edit(int quoteid)
         {
-            ViewBag.Teams = _repo.Teams.ToList();
+            //ViewBag.Teams = _repo.Teams.ToList();
 
-            var bowler = _repo.Bowlers.Single(x => x.BowlerID == bowlerid);
+            var quote = _repo.Quotes.Single(x => x.QuoteID == quoteid);
 
-            return View("NewBowler", bowler);
+            return View("NewQuote", quote);
         }
 
         [HttpPost]
-        public IActionResult Edit(Bowler b)
+        public IActionResult Edit(Quote q)
         {
-            _repo.Update(b);
+            _repo.Update(q);
 
-            return RedirectToAction("BowlerList");
+            return RedirectToAction("QuoteList");
         }
 
         [HttpGet]
-        public IActionResult Delete(int bowlerid)
+        public IActionResult Delete(int quoteid)
         {
-            var bowler = _repo.Bowlers.Single(x => x.BowlerID == bowlerid);
+            var quote = _repo.Quotes.Single(x => x.QuoteID == quoteid);
 
-            return View(bowler);
+            return View(quote);
         }
 
         [HttpPost]
-        public IActionResult Delete(Bowler b)
+        public IActionResult Delete(Quote q)
         {
-            _repo.Delete(b);
+            _repo.Delete(q);
 
-            return RedirectToAction("BowlerList");
+            return RedirectToAction("QuoteList");
         }
 
         public IActionResult Privacy()

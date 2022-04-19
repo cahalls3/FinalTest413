@@ -1,19 +1,24 @@
 ﻿<Properties StartupConfiguration="{71DB3D4E-4151-4DED-B83D-AF566220FFEE}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FinalTest413/appsettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FinalTest413/Views/Home/Index.cshtml">
     <Files>
-      <File FileName="FinalTest413/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
-      <File FileName="FinalTest413/appsettings.json" Line="1" Column="1" />
+      <File FileName="FinalTest413/Controllers/HomeController.cs" Line="67" Column="43" />
+      <File FileName="FinalTest413/Views/Home/Index.cshtml" Line="7" Column="11" />
+      <File FileName="FinalTest413/Views/Home/QuoteList.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FinalTest413" expanded="True">
             <Node name="FinalTest413" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
                 <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True" />
-              <Node name="appsettings.json" selected="True" />
             </Node>
           </Node>
         </State>
