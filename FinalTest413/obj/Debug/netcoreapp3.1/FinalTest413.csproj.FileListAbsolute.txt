@@ -15,7 +15,6 @@
 /Users/carsonhalls/Documents/GitHub/FinalTest413/FinalTest413/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
 /Users/carsonhalls/Documents/GitHub/FinalTest413/FinalTest413/obj/Debug/netcoreapp3.1/Razor/Views/Home/NewQuote.cshtml.g.cs
 /Users/carsonhalls/Documents/GitHub/FinalTest413/FinalTest413/obj/Debug/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs
-/Users/carsonhalls/Documents/GitHub/FinalTest413/FinalTest413/obj/Debug/netcoreapp3.1/Razor/Views/Home/QuoteList.cshtml.g.cs
 /Users/carsonhalls/Documents/GitHub/FinalTest413/FinalTest413/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
 /Users/carsonhalls/Documents/GitHub/FinalTest413/FinalTest413/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
 /Users/carsonhalls/Documents/GitHub/FinalTest413/FinalTest413/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
@@ -76,3 +75,4 @@
 /Users/carsonhalls/Documents/GitHub/FinalTest413/FinalTest413/obj/Debug/netcoreapp3.1/FinalTest413.Views.pdb
 /Users/carsonhalls/Documents/GitHub/FinalTest413/FinalTest413/obj/Debug/netcoreapp3.1/FinalTest413.csproj.CopyComplete
 /Users/carsonhalls/Documents/GitHub/FinalTest413/FinalTest413/obj/Debug/netcoreapp3.1/FinalTest413.genruntimeconfig.cache
+/Users/carsonhalls/Documents/GitHub/FinalTest413/FinalTest413/obj/Debug/netcoreapp3.1/Razor/Views/Home/QuoteDetails.cshtml.g.cs

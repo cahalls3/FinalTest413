@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Quote Details";
+}
+
+@model FinalTest413.Models.Quote
+
+<div class="card border-light mb-4">
+    <div class="card-content">
+        <h3 class="card-header">Quote Details</h3>
+        <div class="card-body cleartfix">
+            <div class="media align-items-stretch">
+                <div class="media-body">
+                    <ul>
+                        <li>ID: @Model.QuoteID</li>
+                        <li>Quote: @Model.QuoteText</li>
+                        <li>Author: @Model.Author</li>
+                        <li>Date: @Model.Date</li>
+                        <li>Subject: @Model.Subject</li>
+                        <li>Citation: @Model.Citation</li>
+                    </ul>
+                    <td><a class="btn btn-outline-primary" asp-controller="Home" asp-action="Edit" asp-route-quoteid="@Model.QuoteID">Edit</a></td>
+                    <td><a class="btn btn-outline-danger" asp-controller="Home" asp-action="Delete" asp-route-quoteid="@Model.QuoteID">Delete</a></td>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a class="btn btn-dark" role="button" asp-action="Index">Back</a>

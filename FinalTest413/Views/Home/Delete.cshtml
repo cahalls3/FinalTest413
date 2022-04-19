@@ -4,12 +4,16 @@
 
 @model Quote
 
-<h2>Confirm Deletion</h2>
-<h3>Are you sure you want to delete the quote by @Model.Author given on @Model.Date?</h3>
+<div class="card border-light mb-4">
+    <div class="row m-1 p-1 justify-content-between align-items-center">
+        <h2 class="row mt-3 ml-4">Confirm Deletion</h2>
+        <h3 class="row mt-3 ml-4">Are you sure you want to delete the quote by @Model.Author given @Model.Date?</h3>
+    </div>
 
-<form method="post" asp-controller="Home" asp-action="Delete">
-    <button type="submit">Delete</button>
-    <a asp-controller="Home" asp-action="QuoteList" class="btn btn-primary">Cancel</a>
+    <form class="mb-3 ml-4" method="post" asp-controller="Home" asp-action="Delete">
+        <button class="btn btn-outline-danger" type="submit">Delete</button>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">Cancel</a>
 
-    <input type="hidden" asp-for="QuoteID" />
-</form>
+        <input type="hidden" asp-for="QuoteID" />
+    </form>
+</div>

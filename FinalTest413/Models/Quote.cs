@@ -8,9 +8,9 @@ namespace FinalTest413.Models
         [Key]
         [Required]
         public int QuoteID { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Please enter a quote")]
         public string QuoteText { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Please enter an Author")]
         public string Author { get; set; }
         public string Date { get; set; }
         public string Subject { get; set; }

@@ -1,31 +1,48 @@
 ﻿@{
-    ViewData["Title"] = "Add New Quote";
+    ViewData["Title"] = "Enter Quote";
 }
 
 @model FinalTest413.Models.Quote
 
-<h1>Fill Out Quote Information</h1>
+<div class="card border-light mb-4">
 
-<div>
-    <form method="post">
-        <div asp-validation-summary="All"></div>
+    <div class="row m-1 p-1 justify-content-between align-items-center">
+        <h1 class="row mt-3 ml-4">Enter Quote Information</h1>
+    </div>
 
-        <label asp-for="QuoteText">Quote:</label>
-        <input asp-for="QuoteText" /><br />
+    <div class="form-group mx-5">
+        <form method="post">
+            <div asp-validation-summary="All"></div>
 
-        <label asp-for="Author">Author:</label>
-        <input asp-for="Author" /><br />
+            <div class="form-group">
+                <label asp-for="QuoteText">Quote:</label>
+                <input class="form-control" asp-for="QuoteText" /><br />
+            </div>
 
-        <label asp-for="Date">Date:</label>
-        <input asp-for="Date" /><br />
+            <div class="form-group">
+                <label asp-for="Author">Author:</label>
+                <input class="form-control" asp-for="Author" /><br />
+            </div>
 
-        <label asp-for="Subject">Subject:</label>
-        <input asp-for="Subject" /><br />
+            <div class="form-group">
+                <label asp-for="Date">Date:</label>
+                <input class="form-control" asp-for="Date" /><br />
+            </div>
 
-        <label asp-for="Citation">Citation:</label>
-        <input asp-for="Citation" /><br />
+            <div class="form-group">
+                <label asp-for="Subject">Subject:</label>
+                <input class="form-control" asp-for="Subject" /><br />
+            </div>
 
-        <button type="submit">Add Quote</button>
+            <div class="form-group">
+                <label asp-for="Citation">Citation:</label>
+                <input class="form-control" asp-for="Citation" /><br />
+            </div>
 
-    </form>
+            <button class="btn btn-outline-primary mb-3" type="submit">Submit</button>
+
+        </form>
+    </div>
 </div>
+
+<a class="btn btn-dark" role="button" asp-action="Index">Back</a>

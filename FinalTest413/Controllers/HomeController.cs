@@ -21,25 +21,15 @@ namespace FinalTest413.Controllers
         public IActionResult Index()
         {
             var money = _repo.Quotes
+                .OrderBy(x => x.Author)
                 .ToList();
 
             return View(money);
         }
 
-        public IActionResult QuoteList()
-        {
-            var quotes = _repo.Quotes
-                .OrderBy(x => x.Author)
-                .ToList();
-
-            return View(quotes);
-        }
-
         [HttpGet]
         public IActionResult NewQuote()
         {
-            //ViewBag.Teams = _repo.Teams.ToList();
-
             return View();
         }
 
@@ -54,18 +44,20 @@ namespace FinalTest413.Controllers
             }
             else // if invalid
             {
-                //ViewBag.Teams = _repo.Teams.ToList();
-
                 return View();
             }
+        }
 
+        public IActionResult QuoteDetails(int quoteID)
+        {
+            var quote = _repo.Quotes.Single(x => x.QuoteID == quoteID);
+
+            return View(quote);
         }
 
         [HttpGet]
         public IActionResult Edit(int quoteid)
         {
-            //ViewBag.Teams = _repo.Teams.ToList();
-
             var quote = _repo.Quotes.Single(x => x.QuoteID == quoteid);
 
             return View("NewQuote", quote);
@@ -76,7 +68,7 @@ namespace FinalTest413.Controllers
         {
             _repo.Update(q);
 
-            return RedirectToAction("QuoteList");
+            return RedirectToAction("QuoteDetails");
         }
 
         [HttpGet]
@@ -92,7 +84,7 @@ namespace FinalTest413.Controllers
         {
             _repo.Delete(q);
 
-            return RedirectToAction("QuoteList");
+            return RedirectToAction("Index");
         }
 
         public IActionResult Privacy()
